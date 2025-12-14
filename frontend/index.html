@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Face Analysis System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Real-Time Face Interaction Analysis</h1>
+      <div id="camera">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+      </div>
+      <div id="messages" aria-live="polite" style="margin-top:.5rem;color:#b91c1c"></div>
+      <div id="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+        <label>FPS:
+          <input id="fpsInput" type="number" value="10" min="1" max="20" />
+        </label>
+        <div id="layerToggles">
+          <label><input type="checkbox" id="toggleOverlay" checked /> Landmarks Overlay</label>
+          <label><input type="checkbox" id="toggleNormalized" checked /> Show Normalized</label>
+          <label><input type="checkbox" id="toggleAUs" checked /> Show AUs</label>
+          <label><input type="checkbox" id="toggleMicros" checked /> Show Micro-expr</label>
+          <label><input type="checkbox" id="toggleAudio" checked /> Show Audio</label>
+        </div>
+      </div>
+      <div style="margin-top:.5rem">
+        <button id="downloadTimeline">Download Timeline</button>
+      </div>
+      <div id="status">
+        <h2>Status</h2>
+        <div>WS: <span id="wsStatus">-</span></div>
+        <div id="faceStatus">Face: <span id="faceDetected">-</span></div>
+        <div id="features">
+          <h3>Features</h3>
+          <div>Mouth Open: <span id="mouthOpen">-</span></div>
+          <div>Eye Openness: <span id="eyeOpen">-</span></div>
+          <div>Eyebrow Intensity: <span id="browIntensity">-</span></div>
+        </div>
+        <div id="audio">
+          <h3>Audio</h3>
+          <div>Intensity: <span id="audioIntensity">-</span></div>
+          <div>Speaking: <span id="audioSpeaking">-</span></div>
+        </div>
+        <div id="aus">
+          <h3>Action Units</h3>
+          <div id="auBars">
+            <div class="au-row"><div class="au-label">AU1</div><div class="bar"><div id="au1Fill" class="fill"></div></div><div id="au1Val" style="width:40px;text-align:right;font-size:12px">-</div></div>
+            <div class="au-row"><div class="au-label">AU2</div><div class="bar"><div id="au2Fill" class="fill"></div></div><div id="au2Val" style="width:40px;text-align:right;font-size:12px">-</div></div>
+            <div class="au-row"><div class="au-label">AU4</div><div class="bar"><div id="au4Fill" class="fill"></div></div><div id="au4Val" style="width:40px;text-align:right;font-size:12px">-</div></div>
+            <div class="au-row"><div class="au-label">AU6</div><div class="bar"><div id="au6Fill" class="fill"></div></div><div id="au6Val" style="width:40px;text-align:right;font-size:12px">-</div></div>
+            <div class="au-row"><div class="au-label">AU12</div><div class="bar"><div id="au12Fill" class="fill"></div></div><div id="au12Val" style="width:40px;text-align:right;font-size:12px">-</div></div>
+            <div class="au-row"><div class="au-label">AU15</div><div class="bar"><div id="au15Fill" class="fill"></div></div><div id="au15Val" style="width:40px;text-align:right;font-size:12px">-</div></div>
+          </div>
+        </div>
+        <div id="micros">
+          <h3>Micro-expression Timeline</h3>
+          <div id="microTimeline">-</div>
+        </div>
+        <div id="facs_micros">
+          <h3>FACS Feature Micro-expressions</h3>
+          <pre id="facsMicro">-</pre>
+        </div>
+        <div id="landmarks_section">
+          <h3>Landmark Representations</h3>
+          <div>Raw (sample): <pre id="landmarksRaw">-</pre></div>
+          <div>Normalized (sample): <pre id="landmarksNorm">-</pre></div>
+          <div>Smoothed (sample): <pre id="landmarksSmooth">-</pre></div>
+        </div>
+        <div id="contextual">
+          <h3>Contextual Events</h3>
+          <pre id="contextList">-</pre>
+        </div>
+        <div id="landmarks_raw">
+          <h3>Raw Landmarks (sample)</h3>
+          <pre id="landmarksRaw">-</pre>
+        </div>
+        <div id="landmarks_norm">
+          <h3>Normalized Landmarks (sample)</h3>
+          <pre id="landmarksNorm">-</pre>
+        </div>
+        <div id="landmarks_smoothed">
+          <h3>Smoothed Normalized Landmarks (sample)</h3>
+          <pre id="landmarksSmooth">-</pre>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>

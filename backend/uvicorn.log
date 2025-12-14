@@ -1,0 +1,35 @@
+nohup: ignoring input
+INFO:     Started server process [70079]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     188.132.137.162:0 - "GET / HTTP/1.1" 200 OK
+INFO:     188.132.137.162:0 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     188.132.137.162:0 - "GET /script.js HTTP/1.1" 304 Not Modified
+INFO:     188.132.137.162:0 - "WebSocket /ws" [accepted]
+INFO:     connection open
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1765629189.835261   71119 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765629189.848944   71118 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     188.132.137.162:0 - "WebSocket /ws" [accepted]
+INFO:     connection open
+W0000 00:00:1765629190.424832   71121 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765629190.435245   71123 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765629191.879649   71122 landmark_projection_calculator.cc:186] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+INFO:     connection closed
+INFO:     188.132.137.162:0 - "GET / HTTP/1.1" 200 OK
+INFO:     connection closed
+INFO:     188.132.137.162:0 - "GET /script.js HTTP/1.1" 304 Not Modified
+INFO:     188.132.137.162:0 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     188.132.137.162:0 - "GET / HTTP/1.1" 200 OK
+INFO:     188.132.137.162:0 - "WebSocket /ws" [accepted]
+INFO:     connection open
+W0000 00:00:1765629631.059195   74144 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765629631.070127   74147 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     connection closed
+INFO:     188.132.137.162:0 - "WebSocket /ws" [accepted]
+INFO:     connection open
+W0000 00:00:1765629857.515504   75732 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1765629857.526009   75735 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     connection closed
